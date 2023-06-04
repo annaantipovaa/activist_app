@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="activist_app.Menu"
+             BackgroundColor="Black">
+  
+        <Grid>
+            <Image Source="kubok.png"></Image>
+
+            <VerticalStackLayout>
+
+                <Button x:Name="Profile"  FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Личный кабинет" BackgroundColor="White" TextColor="Black" CornerRadius="25" Margin="150" HorizontalOptions="Center" Clicked="Profile_Clicked"></Button>
+
+                <Button x:Name="Events"  FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Мероприятия" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center"  CornerRadius="25" Clicked="Events_Clicked"></Button>
+
+            </VerticalStackLayout>
+
+        </Grid>
+ 
+</ContentPage>

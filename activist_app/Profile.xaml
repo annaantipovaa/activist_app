@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="activist_app.Profile"
+             BackgroundColor="White">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="1080" Margin="0, -200, 0, 0">
+                <Label Text="Личный кабинет" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" FontSize="50"></Label>
+            </Frame>
+
+            <Frame CornerRadius="60" BackgroundColor="White" Margin="0,-20,0,0" WidthRequest="100" HeightRequest="100" VerticalOptions="Start">
+                <Image></Image>
+            </Frame>
+
+            <Button x:Name="Rating" WidthRequest="150" HeightRequest="50"  CornerRadius="25" FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" Text="Рейтинг" TextColor="White" BackgroundColor="Black" Clicked="Rating_Clicked" Margin="90"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

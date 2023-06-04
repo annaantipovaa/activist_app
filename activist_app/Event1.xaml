@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="activist_app.Event1"
+             >
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="1080" Margin="0, -200, 0, 0">
+                <Label Text="Название мероприятия" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" FontSize="50"></Label>
+            </Frame>
+
+            <Image></Image>
+
+            <Label Text="Описание мероприятия" Margin="50" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" FontSize="15"></Label>
+
+            <Button x:Name="Join" Text="Зарегистрироваться" WidthRequest="250" HeightRequest="50" CornerRadius="25" TextColor="White" BackgroundColor="Black" Clicked="Join_Clicked"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

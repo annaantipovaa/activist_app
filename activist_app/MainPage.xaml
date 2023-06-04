@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="activist_app.MainPage" BackgroundColor="Black">
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+            Text="Авторизация" TextColor="White"
+            FontSize="40" FontFamily="Gillroy" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="70"/>
+
+            <Label Text="Введите номер вашего профбилета" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" Margin="8"/>
+
+            <Entry Placeholder="" BackgroundColor="White" WidthRequest="300" HeightRequest="50"/>
+
+            <Label Text="Я не знаю" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" Margin="8"/>
+
+            <Button x:Name="Next" FontFamily="Gillroy"  CornerRadius="25" FontAttributes="Bold" FontSize="20" WidthRequest="100" HeightRequest="50" Text="Далее" TextColor="Black" SemanticProperties.Hint="Lets user to go to the menu" HorizontalOptions="Center" BackgroundColor="White" Margin="50" Clicked="Next_Clicked"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
