@@ -9,12 +9,12 @@ namespace activist_api
 
     public class User
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string fName { get; set; }
         public string lName { get; set; }
         public string Group { get; set; }
 
-        public User(int id, string fname, string lname, string group)
+        public User(string id, string fname, string lname, string group)
         {
             Id = id;
             fName = fname;

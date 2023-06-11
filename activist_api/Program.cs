@@ -20,27 +20,27 @@ if (!File.Exists(@"data.db"))
 
 app.MapGet("/status", () => Results.Ok());
 
-app.MapPost("/getUser", async (context) =>
+app.MapGet("/getUser", async (context) =>
 {
     using (var connection = new SqliteConnection("Data Source=data.db"))
     {
         connection.Open();
 
-        if (context.Request.Form["id"] == "")
+        if (context.Request.Query["id"] == "")
         {
             await Results.BadRequest().ExecuteAsync(context);
         }
-        SqliteCommand command = new SqliteCommand($"SELECT * FROM users WHERE id={context.Request.Form["id"]}", connection);
+        SqliteCommand command = new SqliteCommand($"SELECT * FROM users WHERE id={context.Request.Query["id"]}", connection);
         using (SqliteDataReader dr = command.ExecuteReader())
         {
             if (dr.HasRows)
             {
                 dr.Read();
-                User u = new User(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetString(3));
+                User u = new User(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3));
                 await Results.Json(u).ExecuteAsync(context);
             } else
             {
-                await Results.BadRequest().ExecuteAsync(context);
+                await Results.NotFound().ExecuteAsync(context);
             }
         }
         connection.Close();
