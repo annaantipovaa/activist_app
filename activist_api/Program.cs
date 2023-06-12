@@ -60,7 +60,7 @@ app.MapGet("/getRating", async (context) =>
                 List<UserRating> r = new List<UserRating>();
                 while (dr.Read())
                 {
-                    r.Add(new UserRating(dr.GetInt32(0), dr.GetInt32(1)));
+                    r.Add(new UserRating(dr));
                 }
 
                 await Results.Json(r).ExecuteAsync(context);

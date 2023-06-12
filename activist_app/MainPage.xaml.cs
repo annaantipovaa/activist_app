@@ -1,23 +1,17 @@
 ﻿using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace activist_app;
 
 public partial class MainPage : ContentPage
 {
-    public class User
-    {
-        public string id;
-        public string fName;
-        public string lName;
-        public string group;
-    }
-
 	public MainPage()
 	{
-		InitializeComponent();
-        if(Preferences.Default.ContainsKey("id")) {
+        if (Preferences.Default.ContainsKey("id"))
+        {
             Navigation.PushAsync(new Menu());
         }
+        InitializeComponent();
     }
 
 
@@ -33,12 +27,12 @@ public partial class MainPage : ContentPage
                 var response = await client.GetAsync($"{Methods.APIEndpoint()}/getUser?id={Input.Text}");
                 if (response.IsSuccessStatusCode)
                 {
-                    User u = await response.Content.ReadFromJsonAsync<User>();
+                    User u = await JsonSerializer.DeserializeAsync<User>(response.Content.ReadAsStream());
 
                     Preferences.Default.Set("id", u.id);
-                    Preferences.Default.Set("fName", u.fName);
-                    Preferences.Default.Set("lName", u.lName);
-                    Preferences.Default.Set("lName", u.group);
+                    Preferences.Default.Set("first_name", u.fName);
+                    Preferences.Default.Set("last_name", u.lName);
+                    Preferences.Default.Set("group", u.group);
 
                     await Navigation.PushAsync(new Menu());
                 }
@@ -46,12 +40,11 @@ public partial class MainPage : ContentPage
                 {
                     await DisplayAlert("Ошибка", "Профбилет не найден", "ОК");
                 }
-            } catch (Exception ex)
+            } catch 
             {
-                await DisplayAlert("Ошибка", $"{Methods.APIEndpoint()}\n{ex.Message}\nСервис недоступен", "OK");
+                await DisplayAlert("Ошибка", "Сервис недоступен", "OK");
             }
         }
-
     }
 
     private void idkButton_Clicked(object sender, EventArgs e)

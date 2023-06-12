@@ -9,10 +9,16 @@ namespace activist_api
 
     public class User
     {
-        public string Id { get; set; }
-        public string fName { get; set; }
-        public string lName { get; set; }
-        public string Group { get; set; }
+        private bool exists = false;
+        public string? Id { get; set; }
+        public string? fName { get; set; }
+        public string? lName { get; set; }
+        public string? Group { get; set; }
+
+        bool isExist()
+        {
+            return exists;
+        }
 
         public User(string id, string fname, string lname, string group)
         {
@@ -21,17 +27,52 @@ namespace activist_api
             lName = lname;
             Group = group;
         }
+
+        public User(SqliteDataReader reader) {
+            this.Id = reader.GetString(0);
+            this.fName = reader.GetString(1);
+            this.lName = reader.GetString(2);
+            this.Group = reader.GetString(3);
+        }
+
+        public User(string id)
+        {
+            using (SqliteConnection connection = new SqliteConnection("Data Source=data.db"))
+            {
+                connection.Open();
+
+                var command = new SqliteCommand($"SELECT * FROM users WHERE id={id}", connection);
+                using (SqliteDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        this.exists = true;
+                        reader.Read();
+
+                        this.Id = reader.GetString(0);
+                        this.fName = reader.GetString(1);
+                        this.lName = reader.GetString(2);
+                        this.Group = reader.GetString(3);
+                    } else
+                    {
+                        this.exists = false;
+                    }
+                }
+            }
+
+        }
     }
 
     public class UserRating
     {
-        public int id { get; set; }
+        //public string name { get; set; }
+        public User user { get; set; }
         public int points { get; set; }
 
-        public UserRating(int id, int points)
+        public UserRating(SqliteDataReader reader)
         {
-            this.id = id;
-            this.points = points;
+            this.user = new User(reader.GetString(0));
+            this.points = reader.GetInt32(1);
         }
     }
 

@@ -10,9 +10,22 @@
                 <Label Text="Личный кабинет" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" FontSize="50"></Label>
             </Frame>
 
-            <Frame CornerRadius="60" BackgroundColor="White" Margin="0,-20,0,0" WidthRequest="100" HeightRequest="100" VerticalOptions="Start">
+            <!-- <Frame CornerRadius="60" BackgroundColor="White" Margin="0,-20,0,0" WidthRequest="100" HeightRequest="100" VerticalOptions="Start">
                 <Image></Image>
-            </Frame>
+            </Frame> -->
+
+            <VerticalStackLayout>
+                <Label Text="Имя"/>
+                <Label x:Name="firstName" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Фамилия"/>
+                <Label x:Name="lastName" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Группа"/>
+                <Label x:Name="group" />
+            </VerticalStackLayout>
 
             <Button x:Name="Rating" WidthRequest="150" HeightRequest="50"  CornerRadius="25" FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" Text="Рейтинг" TextColor="White" BackgroundColor="Black" Clicked="Rating_Clicked" Margin="90"></Button>
 
