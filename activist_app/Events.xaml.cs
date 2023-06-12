@@ -31,43 +31,79 @@ public partial class Events : ContentPage
                 {
                     Grid eventRow = new Grid
                     {
+                        
                         RowDefinitions =
                         {
-                            new RowDefinition(),
-                            new RowDefinition(),
-                            new RowDefinition(),
-                            new RowDefinition(),
-                            new RowDefinition()
+                            new RowDefinition{Height = new GridLength(10, GridUnitType.Auto)},
+                            new RowDefinition{Height = new GridLength(10, GridUnitType.Auto)},
+                            new RowDefinition{Height = new GridLength(10, GridUnitType.Auto)},
+                            new RowDefinition{Height = new GridLength(10, GridUnitType.Auto)},
+                            new RowDefinition{Height = new GridLength(10, GridUnitType.Auto)}
                         }
                     };
 
                     eventRow.Add(new Image
                     {
-                        Source = new Uri(item.img)
+                        Source = new Uri(item.img),
+                        HeightRequest = 400,
+                        WidthRequest = 200,
+                        Margin = new Thickness(30)
+                        
                     }, 0, 0); ;
 
                     eventRow.Add(new Label
                     {
-                        Text = item.name
+                        Text = item.name, FontFamily = "Gilroy", 
+                        FontAttributes = FontAttributes.Bold, 
+                        FontSize = 30,
+                        HorizontalOptions = LayoutOptions.Center, 
+                        VerticalOptions = LayoutOptions.Center,
+                        Margin = new Thickness(20)
+                        
                     }, 0, 1);
 
                     eventRow.Add(new Label
                     {
-                        Text = item.description
+                        Text = item.description,
+                        FontFamily = "Gilroy",
+                        FontAttributes = FontAttributes.Bold,
+                        FontSize = 20,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                        Margin = new Thickness(20)
+                        
                     }, 0, 2);
 
                     DateTime date = DateTime.ParseExact(item.timeStart, "yyyyMMddTHH:mm:ssZ", new System.Globalization.CultureInfo("ru-RU"));
 
                     eventRow.Add(new Label
                     {
-                        Text = date.ToString("dddd, d MMMM, H:mm", new System.Globalization.CultureInfo("ru-RU"))
+                        Text = date.ToString("dddd, d MMMM, H:mm", new System.Globalization.CultureInfo("ru-RU")),
+                        FontFamily = "Gilroy",
+                        FontAttributes = FontAttributes.Bold,
+                        FontSize = 14,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                        Margin = new Thickness(20)
+                        
                     }, 0, 3); ;
 
                     eventRow.Add(new Button
                     {
                         Text = "Зарегистрироваться",
+                        FontFamily = "Gilroy",
+                        HeightRequest = 80,
+                        WidthRequest = 230,
+                        FontAttributes = FontAttributes.Bold,
+                        FontSize = 18,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                        Margin = new Thickness(0, 20, 0, 0),
+                        CornerRadius = 35,
                         Command = TapCommand,
-                        CommandParameter = item.registrationLink
+                        CommandParameter = item.registrationLink,
+                        BackgroundColor = Color.FromRgb(X, Y, 0),
+                        
                     }, 0, 4);
 
                     eventsLayout.Children.Add(eventRow);
