@@ -6,8 +6,8 @@
     <ScrollView>
         <VerticalStackLayout>
 
-            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="1080" Margin="0, -200, 0, 0">
-                <Label Text="Личный кабинет" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gillroy" FontAttributes="Bold" FontSize="50"></Label>
+            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="800" Margin="0, -200, 0, 0">
+                <Label Text="Личный кабинет" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gilroy" FontAttributes="Bold" FontSize="45"></Label>
             </Frame>
 
             <!-- <Frame CornerRadius="60" BackgroundColor="White" Margin="0,-20,0,0" WidthRequest="100" HeightRequest="100" VerticalOptions="Start">
@@ -15,16 +15,16 @@
             </Frame> -->
 
             <VerticalStackLayout>
-                <Label Text="Имя"/>
-                <Label x:Name="firstName" />
+                <Label Text="Имя" FontFamily="Gilroy" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Black" FontSize="25" Margin="20"/>
+                <Label x:Name="firstName" FontFamily="Gilroy" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
             </VerticalStackLayout>
             <VerticalStackLayout>
-                <Label Text="Фамилия"/>
-                <Label x:Name="lastName" />
+                <Label Text="Фамилия" FontFamily="Gilroy" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" Margin="20"  FontSize="25" BackgroundColor="Black"/>
+                <Label x:Name="lastName" FontFamily="Gilroy" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
             </VerticalStackLayout>
             <VerticalStackLayout>
-                <Label Text="Группа"/>
-                <Label x:Name="group" />
+                <Label Text="Группа" FontFamily="Gilroy" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" Margin="20" BackgroundColor="Black"/>
+                <Label x:Name="group" FontFamily="Gilroy" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
             </VerticalStackLayout>
 
             <Button x:Name="Rating" WidthRequest="150" HeightRequest="50"  CornerRadius="25" FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" Text="Рейтинг" TextColor="White" BackgroundColor="Black" Clicked="Rating_Clicked" Margin="90"></Button>

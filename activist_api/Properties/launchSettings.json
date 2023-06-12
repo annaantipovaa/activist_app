@@ -2,7 +2,7 @@
   "profiles": {
     "http": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\noodleheaded\\Coding\\study\\kursach\\activist_app\\activist_api\\bin\\Debug\\net7.0",
+      "workingDirectory": "C:\\activist_app\\activist_api\\bin\\Debug\\net7.0",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

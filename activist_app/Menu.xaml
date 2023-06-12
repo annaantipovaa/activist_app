@@ -9,9 +9,9 @@
 
             <VerticalStackLayout>
 
-                <Button x:Name="Profile"  FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Личный кабинет" BackgroundColor="White" TextColor="Black" CornerRadius="25" Margin="150" HorizontalOptions="Center" Clicked="Profile_Clicked"></Button>
+                <Button x:Name="Profile"  FontFamily="Gilroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Личный кабинет" BackgroundColor="White" TextColor="Black" CornerRadius="25" Margin="150" HorizontalOptions="Center" Clicked="Profile_Clicked"></Button>
 
-                <Button x:Name="Events"  FontFamily="Gillroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Мероприятия" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center"  CornerRadius="25" Clicked="Events_Clicked"></Button>
+                <Button x:Name="Events"  FontFamily="Gilroy" FontAttributes="Bold" FontSize="15" WidthRequest="170" HeightRequest="50" Text="Мероприятия" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center"  CornerRadius="25" Clicked="Events_Clicked"></Button>
 
             </VerticalStackLayout>
 

@@ -36,12 +36,17 @@ public partial class Rating : ContentPage
 
                     ratingRow.Add(new Label
                     {
-                        Text = $"{item.user.fName} {item.user.lName}\n{item.user.group}"
+                        Text = $"{item.user.fName} {item.user.lName}\n{item.user.group}",
+                        FontFamily = "Gilroy", FontAttributes = FontAttributes.Bold,
+                        HorizontalOptions = LayoutOptions.Center
                     }, 0, 0);
 
                     ratingRow.Add(new Label
                     {
-                        Text = item.points.ToString()
+                        Text = item.points.ToString(),
+                        FontFamily = "Gilroy",
+                        FontAttributes = FontAttributes.Bold,
+                        HorizontalOptions = LayoutOptions.Center
                     }, 1, 0);
 
                     if(Preferences.Get("id", "error") == item.user.id)

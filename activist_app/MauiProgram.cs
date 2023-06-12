@@ -17,7 +17,7 @@ public static class MauiProgram
 
 #if DEBUG
 		builder.Logging.AddDebug();
-		Preferences.Default.Set("api_endpoint", "http://10.0.2.2:5055");
+		Preferences.Default.Set("api_endpoint", "http://localhost:5000");
 #endif
 
 		return builder.Build();
