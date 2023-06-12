@@ -78,13 +78,13 @@ namespace activist_api
 
     public class Event
     {
-        public int id;
-        public string name;
-        public string description;
-        public string registrationLink;
-        public string img;
-        public string timeStart;
-        public string timeEnd;
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string registrationLink { get; set; }
+        public string img { get; set; }
+        public string timeStart { get; set; }
+        public string timeEnd { get; set; }
 
         public Event(int id, string name, string description, string registrationLink, string img, string timeStart, string timeEnd)
         {
@@ -99,15 +99,13 @@ namespace activist_api
 
         public Event(SqliteDataReader reader)
         {
-            this.id = reader.GetInt32(0);
-            this.name = reader.GetString(1);
-            this.description = reader.GetString(2);
-            this.registrationLink = reader.GetString(3);
-            this.img = reader.GetString(4);
-            this.description = reader.GetString(5);
-            this.img = reader.GetString(6);
-            this.timeStart = reader.GetString(6);
-            this.timeEnd = reader.GetString(7);
+            id = reader.GetInt32(0);
+            name = reader.GetString(1);
+            description = reader.GetString(2);
+            registrationLink = reader.GetString(3);
+            img = reader.GetString(4);
+            timeStart = reader.GetString(5);
+            timeEnd = reader.GetString(6);
         }
 
         DateTime getStart()
