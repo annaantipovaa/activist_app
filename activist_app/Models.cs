@@ -19,4 +19,14 @@ namespace activist_app
         public User user { get; set; }
         public int points { get; set; }
     }
+
+    public class Event
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string registrationLink { get; set; }
+        public string img { get; set; }
+        public string timeStart { get; set; }
+    }
 }

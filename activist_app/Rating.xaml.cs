@@ -13,8 +13,6 @@ public partial class Rating : ContentPage
 
     private async void ContentPage_Loaded(object sender, EventArgs e)
     {
-        
-
         HttpClient client = new HttpClient();
         try
         {
