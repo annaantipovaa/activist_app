@@ -5,7 +5,7 @@
     <ScrollView>
         <VerticalStackLayout>
 
-            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="1080" Margin="0, -200, 0, 0">
+            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="800" Margin="0, -200, 0, 0">
                 <Label Text="Мероприятия" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gilroy" FontAttributes="Bold" FontSize="50"></Label>
             </Frame>
 

@@ -14,7 +14,7 @@
 
             <Entry x:Name="Input" Placeholder="" MaxLength="16" BackgroundColor="White" WidthRequest="300" HeightRequest="50" Keyboard="Numeric" IsTextPredictionEnabled="False" ClearButtonVisibility="WhileEditing"/>
 
-            <Button x:Name="idkButton" Text="Я не знаю" TextColor="White" FontSize="15" FontFamily="Gillroy" FontAttributes="Bold" Margin="8" Clicked="idkButton_Clicked"/>
+            <Button x:Name="idkButton" Text="Я не знаю" TextColor="Black" FontSize="15" FontFamily="Gillroy" FontAttributes="Bold" Margin="8" Clicked="idkButton_Clicked" BackgroundColor="White" WidthRequest="100" HeightRequest="50" CornerRadius="25"/>
 
             <Button x:Name="Next" FontFamily="Gillroy"  CornerRadius="25" FontAttributes="Bold" FontSize="20" WidthRequest="100" HeightRequest="50" Text="Далее" TextColor="Black" SemanticProperties.Hint="Lets user to go to the menu" HorizontalOptions="Center" BackgroundColor="White" Margin="50" Clicked="Next_Clicked"/>
 

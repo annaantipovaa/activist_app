@@ -4,7 +4,7 @@
              x:Class="activist_app.Rating" Loaded="ContentPage_Loaded">
     <ScrollView>
         <VerticalStackLayout x:Name="ratingLayout">
-            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="1000" Margin="0, -200, 0, 0">
+            <Frame BackgroundColor="Black" HorizontalOptions="CenterAndExpand" CornerRadius="300" HeightRequest="300" WidthRequest="800" Margin="0, -200, 0, 0">
                 <Label Text="Рейтинг" TextColor="White" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontFamily="Gilroy" FontAttributes="Bold" FontSize="45"></Label>
             </Frame>
 
